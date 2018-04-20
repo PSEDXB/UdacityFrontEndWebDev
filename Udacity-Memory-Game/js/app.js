@@ -44,7 +44,12 @@ function insertTimer() {
 	time = time + 1;
 	timer.innerHTML = `Time: ${time} seconds`;
 }
-insertTimer = setInterval(insertTimer, 1000);
+
+document.querySelector('.deck').addEventListener('click', function startTime(evt) {
+	insertTimer = setInterval(insertTimer, 1000);
+	evt.target.removeEventListener('click', startTime);
+})
+
 
 // Increments moves.
 const movesLoc = document.querySelector('.moves');
