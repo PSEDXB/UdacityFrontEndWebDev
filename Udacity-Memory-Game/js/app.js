@@ -64,8 +64,6 @@ function starDec() {
 		stars[2].remove();
 	} else if (movesLoc.innerHTML == 30) {
 		stars[1].remove();
-	} else if (movesLoc.innerHTML == 40) {
-		stars[0].remove();
 	} else {
 		return stars;
 	}
