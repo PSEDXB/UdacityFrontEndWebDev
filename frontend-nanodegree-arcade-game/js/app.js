@@ -50,6 +50,7 @@ class Player {
             ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
         }
 
+        // The two next methods reset the game and display victory/defeat alerts.  TODO: modals!
         this.victory = function() {
             player.y = 410;
             player.x = 200;
@@ -62,6 +63,7 @@ class Player {
             alert('You dead!');
         }
 
+    // Ternary operators did not interfere with subsequent conditional whereas an if/else statement did.
         this.handleInput = function(k) {
             switch (k)  {
                 case 'left':
@@ -77,9 +79,8 @@ class Player {
                     this.y += 83;
                     break;
             }
-            
-// Constrains player.y and establishes victory condition/action.
 
+    // Constrains player.y and establishes victory condition/action.
             if (this.y > 410) {
                 this.y = 410;
             } else if (this.y < 0) {
@@ -92,7 +93,7 @@ class Player {
     }
 };
 
-// Instantiates player, enemies, and collectibles.
+// Instantiates player, enemies, and (TODO) collectibles.
 const enemy1 = new Enemy(0, 225);
 const enemy2 = new Enemy(0, 145);
 const enemy3 = new Enemy(0, 65);
