@@ -1,6 +1,42 @@
-frontend-nanodegree-arcade-game
-===============================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+# Pete's Arcade Game Clone!
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Table of Contents
+
+* [About](#about)
+* [Starting the Game](#startingthegame)
+* [Playing the Game](#playingthegame)
+* [Instructions](#instructions)
+* [Dependencies](#dependencies)
+* [Contributing](#contributing)
+
+
+## About
+
+This project was completed as part of the Udacity Front End Web Development Nanodegree Program. Almost all of the code outside of the app.js file was provided by Udacity.
+
+## Starting the Game
+
+The game can be accessed at the following URL:
+
+<http://htmlpreview.github.io/?https://github.com/PeteEdgerton/UdacityFrontEndWebDev/blob/master/frontend-nanodegree-arcade-game/index.html>
+
+Alternatively, you can download the folder on Github and open the index.html file on your browser of choice.
+
+## Playing the Game
+
+To play, use the arrow keys to control the player.
+
+If you get to the water, you win!  
+
+If you get hit by a bug...you dead! 
+
+## Dependencies
+
+This project relies on no external projects or libraries - it is an exercise in vanilla JavaScript, CSS, and HTML.
+
+This project does use ES6, which may cause issues for users of IE 11, Opera Mini, and Samsung Internet web browsers.  Additionaly, the canvas animation may cause issues for users of Opera Mini.
+
+## Contributing
+
+This repository is a personal project.  If you want to contribute, however, please feel free to shoot me a pull request!

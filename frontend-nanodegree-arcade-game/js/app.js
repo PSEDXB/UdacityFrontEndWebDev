@@ -1,7 +1,7 @@
-//TODO: Creativity :)
+//TODO: Creativity and collectibles? :)
 
 class Enemy {
-    constructor(x,y, speed) {
+    constructor(x, y, speed) {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
@@ -76,8 +76,8 @@ class Player {
                 case 'down':
                     this.y += 83;
                     break;
-                }
-
+            }
+            
 // Constrains player.y and establishes victory condition/action.
 
             if (this.y > 410) {
@@ -88,7 +88,6 @@ class Player {
             } else {
                 return this.y;
             }
-          
         }
     }
 };
@@ -101,8 +100,6 @@ const enemy3 = new Enemy(0, 65);
 const allEnemies = [enemy1, enemy2, enemy3];
 
 const player = new Player(200, 410, 500);
-
-
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
