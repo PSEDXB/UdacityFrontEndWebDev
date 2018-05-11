@@ -1,4 +1,7 @@
+
 //TODO: Creativity and collectibles? :)
+
+'use strict';
 
 class Enemy {
     constructor(x, y, speed) {
@@ -31,9 +34,9 @@ class Enemy {
     // Draw the enemy on the screen, required method for game
         this.render = function() {
             ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-        }
+        };
     }
-};
+}
 
 class Player {
     constructor(x, y, speed) {
@@ -44,26 +47,26 @@ class Player {
 
         this.update = function(dt) {
             this.speed *= dt;
-        }
+        };
 
         this.render = function() {
             ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-        }
+        };
 
         // The two next methods reset the game and display victory/defeat alerts.  TODO: modals!
         this.victory = function() {
             player.y = 410;
             player.x = 200;
             alert('Victory!');
-        }
+        };
 
         this.defeat = function() {
             player.y = 410;
             player.x = 200;
             alert('You dead!');
-        }
+        };
 
-    // Ternary operators did not interfere with subsequent conditional whereas an if/else statement did.
+    // Ternary operators did not interfere with subsequent conditional whereas an if/else statement did.  Is this too 
         this.handleInput = function(k) {
             switch (k)  {
                 case 'left':
@@ -89,9 +92,9 @@ class Player {
             } else {
                 return this.y;
             }
-        }
+        };
     }
-};
+}
 
 // Instantiates player, enemies, and (TODO) collectibles.
 const enemy1 = new Enemy(0, 225);
