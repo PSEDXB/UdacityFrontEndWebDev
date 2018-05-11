@@ -1,6 +1,3 @@
-
-//TODO: Creativity and collectibles? :)
-
 'use strict';
 
 class Enemy {
@@ -27,7 +24,7 @@ class Enemy {
 
         // Checks for player, establishes defeat condition.
             if ((this.x < player.x + 50) && (this.x > player.x - 50) && (this.y < player.y + 50) && (this.y > player.y -50)) {
-                setTimeout(player.defeat, 5);
+                setTimeout(player.defeat.call(player), 5);
             }
         };
         
@@ -55,14 +52,14 @@ class Player {
 
         // The two next methods reset the game and display victory/defeat alerts.  TODO: modals!
         this.victory = function() {
-            player.y = 410;
-            player.x = 200;
+            this.x = 200;
+            this.y = 410;
             alert('Victory!');
         };
 
         this.defeat = function() {
-            player.y = 410;
-            player.x = 200;
+            this.y = 410;
+            this.x = 200;
             alert('You dead!');
         };
 
@@ -88,7 +85,7 @@ class Player {
                 this.y = 410;
             } else if (this.y < 0) {
                 this.y = 0;
-                setTimeout(this.victory, 100);
+                setTimeout(this.victory.bind(player), 100);
             } else {
                 return this.y;
             }
