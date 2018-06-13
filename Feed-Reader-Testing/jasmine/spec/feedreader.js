@@ -1,11 +1,13 @@
 $(function() {
 
     describe("RSS Feeds", function() {
+        
     // tests that at least one feed has loaded and is not undefined.
         it("are defined", function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
+
     // tests that each feed's URL is defined and is not an empty string.
         it("are links", function() {
             allFeeds.forEach(function(feed) { 
@@ -47,6 +49,7 @@ $(function() {
                 done();
             });
         });
+
     // checks that entry links have loaded.
         it("are not empty", function(done) {
             var entriesList = (document.querySelector(".feed").getElementsByClassName("entry"));
@@ -67,6 +70,7 @@ $(function() {
                 });
             });
         });
+
     // tests that feed is loading as expected.
        it("content changes when feed loads", function(done) {
             var feed2 = document.querySelector(".feed").innerHTML;
