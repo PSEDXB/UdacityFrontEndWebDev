@@ -8,11 +8,12 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-    // tests that each feed's URL is defined and is not an empty string.
+    // tests that each feed's URL is not an empty string and has a length greater than one.  
         it("are links", function() {
             allFeeds.forEach(function(feed) { 
                 expect(feed.url).toBeDefined();
                 expect(feed.url).not.toBe("");
+                expect(feed.url.length).toBeGreaterThan(0);
             });
         });
 
@@ -45,9 +46,7 @@ $(function() {
 
     describe("Initial Entries", function() {
         beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
+            loadFeed(0, done);
         });
 
     // checks that entry links have loaded.
